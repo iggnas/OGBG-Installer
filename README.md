@@ -10,7 +10,7 @@ This script automates the installation and setup of OG:BG on Linux
 
 ## Usage
 
-To run the script, simply paste and execute the following command in your terminal:
+To run the script, simply caopy and paste following command in your terminal:
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/iggnas/OGBG-Linux/refs/heads/main/installer.sh)
