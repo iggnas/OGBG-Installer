@@ -21,11 +21,11 @@ else
     echo "Bottles is already installed."
 fi
 
-# echo "Downloading PUBG .rar file..."
-# if ! curl -o ~/Downloads/Pubg.rar https://pixeldrain.com/api/file/w1iGoHs3; then
-#     echo "Error: Failed to download PUBG .rar file."
-#     exit 1
-# fi
+echo "Downloading PUBG .rar file..."
+if ! curl -o ~/Downloads/Pubg.rar https://pixeldrain.com/api/file/w1iGoHs3; then
+    echo "Error: Failed to download PUBG .rar file."
+    exit 1
+fi
 
 echo "Extracting the .rar file..."
 if ! unrar x ~/Downloads/Pubg.rar ~/Games; then
