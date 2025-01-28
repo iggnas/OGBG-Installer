@@ -34,7 +34,8 @@ if ! unrar x ~/Downloads/Pubg.rar ~/Games; then
 fi
 
 echo "Creating new Bottle 'PUBG_OG' with win64 architecture and gaming environment..."
-if ! flatpak run --command=bottles-cli com.usebottles.bottles new --bottle-name PUBG_OG --arch win64 --environment gaming; then
+if ! flatpak run --command=bottles-cli com.usebottles.bottles new --bottle-name PUBG_OG --arch win64 --environment gaming;
+   ! flatpak override com.usebottles.bottles --filesystem=/home/$USER; then
     echo "Error: Failed to create the 'PUBG_OG' bottle."
     exit 1
 fi
