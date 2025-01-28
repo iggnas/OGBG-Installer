@@ -21,6 +21,12 @@ else
     echo "Bottles is already installed."
 fi
 
+echo "Granting Bottles access to the user's home directory..."
+if ! flatpak override com.usebottles.bottles --filesystem=/home/$USER; then
+    echo "Error: Failed to grant Bottles access to the file system."
+    exit 1
+fi
+
 echo "Downloading PUBG .rar file..."
 if ! curl -o ~/Downloads/Pubg.rar https://pixeldrain.com/api/file/w1iGoHs3; then
     echo "Error: Failed to download PUBG .rar file."
@@ -34,8 +40,7 @@ if ! unrar x ~/Downloads/Pubg.rar ~/Games; then
 fi
 
 echo "Creating new Bottle 'PUBG_OG' with win64 architecture and gaming environment..."
-if ! flatpak run --command=bottles-cli com.usebottles.bottles new --bottle-name PUBG_OG --arch win64 --environment gaming;
-   ! flatpak override com.usebottles.bottles --filesystem=/home/$USER; then
+if ! flatpak run --command=bottles-cli com.usebottles.bottles new --bottle-name PUBG_OG --arch win64 --environment gaming; then
     echo "Error: Failed to create the 'PUBG_OG' bottle."
     exit 1
 fi
