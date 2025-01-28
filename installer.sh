@@ -22,7 +22,7 @@ else
 fi
 
 echo "Granting Bottles access to the user's home directory..."
-if ! flatpak override com.usebottles.bottles --filesystem=/home/$USER; then
+if ! sudo flatpak override com.usebottles.bottles --filesystem=/home/$USER; then
     echo "Error: Failed to grant Bottles access to the file system."
     exit 1
 fi
