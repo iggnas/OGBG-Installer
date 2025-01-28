@@ -4,7 +4,7 @@ This script automates the installation and setup of OG:BG on Linux
 
 ## Requirements
 
-- **unp**
+- **unrar**
 - **curl**
 - **flatpak**
 
