@@ -1,4 +1,4 @@
-# OGBG Installer
+# OGBG Installer for Linux
 
 This script automates the installation and setup of OG:BG on Linux
 
